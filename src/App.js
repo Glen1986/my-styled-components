@@ -8,6 +8,7 @@ const Content = styled.div`
     padding: 20px 25px;
 `
 const Button = styled.button`
+    transition: box-shadow 0.2s ease;
     background-color: ${(props) => (props.primary ? 'red' : 'white')};
     // background-color: ${(props) => (props.secondary ? 'yellow' : 'white')};
     color: ${(props) => (props.primary ? 'white' : 'red')};
@@ -16,6 +17,16 @@ const Button = styled.button`
     border-radius: 8px;
     font-weight: 600;
     font-size: 15px;
+
+    &:hover {
+        box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.6);
+    }
+
+    &.secondary {
+        background-color: blue;
+        border: solid 2px blue;
+        color: white;
+    }
 `
 const BlockButton = styled(Button)`
     width: 100%;
@@ -33,7 +44,7 @@ function App() {
             <P>hola, soy un parrafo</P>
             <Button>Enviar</Button>
             <Button primary>Check</Button>
-            <Button secondary>Check</Button>
+            <Button className="secondary">Check2</Button>
             <br />
             <BlockButton> bloke</BlockButton>
             <BlockButton primary> bloke2</BlockButton>
