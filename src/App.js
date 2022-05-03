@@ -21,7 +21,12 @@ const BlockButton = styled(Button)`
     width: 100%;
     font-size: 24px;
 `
-
+const Link = ({ className, ...props }) => {
+    return <a className={className} {...props}></a>
+}
+const StyledLink = styled(Link)`
+    color: blue;
+`
 function App() {
     return (
         <Content>
@@ -38,6 +43,10 @@ function App() {
             <BlockButton as="a" href="#">
                 bloke2
             </BlockButton>
+            <BlockButton>block3</BlockButton>
+            <Link>link</Link>
+            <br />
+            <StyledLink>link con estilo</StyledLink>
         </Content>
     )
 }
