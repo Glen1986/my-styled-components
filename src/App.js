@@ -31,6 +31,13 @@ function App() {
             <Button secondary>Check</Button>
             <br />
             <BlockButton> bloke</BlockButton>
+            <BlockButton primary> bloke2</BlockButton>
+            {/**modificamos el compòrtamiento de nuestro elemento 'BlockButton' 
+            con la propiedad 'as'**/}
+            <br />
+            <BlockButton as="a" href="#">
+                bloke2
+            </BlockButton>
         </Content>
     )
 }
