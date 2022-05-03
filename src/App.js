@@ -17,6 +17,11 @@ const Button = styled.button`
     font-weight: 600;
     font-size: 15px;
 `
+const BlockButton = styled(Button)`
+    width: 100%;
+    font-size: 24px;
+`
+
 function App() {
     return (
         <Content>
@@ -24,6 +29,8 @@ function App() {
             <Button>Enviar</Button>
             <Button primary>Check</Button>
             <Button secondary>Check</Button>
+            <br />
+            <BlockButton> bloke</BlockButton>
         </Content>
     )
 }
